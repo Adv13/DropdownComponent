@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Dropdown from "./lib/components/Dropdown";
+import "./main.scss";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const options = [
+  {
+    name: "mango",
+    key: "man",
+  },
+  {
+    name: "banana",
+    key: "ban",
+  },
+  {
+    name: "apple",
+    key: "app",
+  },
+  {
+    name: "orange",
+    key: "ora",
+  },
+];
+
+const onChange = (value) => {
+  return alert(value + " added to cart");
+};
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Dropdown
+      options={options}
+      defaultOption="Please select a fruit"
+      onChange={onChange}
+    ></Dropdown>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
