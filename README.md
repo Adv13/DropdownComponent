@@ -1,4 +1,4 @@
-# my-dropdown-lib
+# my-dropdown-comp
 
 A simple React library created using `create-react-app`.
 
@@ -7,7 +7,7 @@ It allows you to create a custom selectable component with 3 props
 ## Installation
 
 Run the following command:
-`npm install my-dropdown-lib`
+`npm install my-dropdown-comp`
 
 ## Controllable Props
 
